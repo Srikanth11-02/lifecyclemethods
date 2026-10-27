@@ -1,4 +1,4 @@
-# Ex.No:2 To create a HelloWorld Activity using all lifecycles methods to display messages.
+# Ex.No:1 To create a HelloWorld Activity using all lifecycles methods to display messages.
 
 
 ## AIM:
@@ -29,14 +29,90 @@ Step 7: Save and run the application.
 ```
 /*
 Program to print the text “Hello World”.
-Developed by:
-Registeration Number :
+Developed by: Srikanth K
+Registeration Number : 212225240153
 */
+## MainActivity.java
+~~~
+package com.example.lifecyclemethods;
+
+import android.os.Bundle;
+import android.widget.Toast;
+
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class MainActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        Toast t = Toast.makeText(getApplicationContext(), "onCreate Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onStart(){
+        super.onStart();
+        Toast t  = Toast.makeText(getApplicationContext(), "onStart Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    @Override
+    protected void onPause(){
+        super.onPause();
+        Toast t = Toast.makeText(getApplicationContext(), "onPause Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onResume(){
+        super.onResume();
+        Toast t = Toast.makeText(getApplicationContext(), "onResume Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onStop(){
+        super.onStop();
+        Toast t = Toast.makeText(getApplicationContext(), "onStop Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onRestart(){
+        super.onRestart();
+        Toast t = Toast.makeText(getApplicationContext(), "onRestart Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+    protected void onDestroy(){
+        super.onDestroy();
+        Toast t = Toast.makeText(getApplicationContext(), "onDestroy Called", Toast.LENGTH_LONG);
+        t.show();
+    }
+}
+```
+## Activity.xml
+```
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
 ```
 
 ## OUTPUT
 
+<img width="1535" height="862" alt="image" src="https://github.com/user-attachments/assets/c819d715-4091-404b-8411-4f68b24fa3c8" />
 
+<img width="1533" height="857" alt="image" src="https://github.com/user-attachments/assets/ec66bc6c-8b96-4262-9d0f-f480368fffc4" />
 
 
 ## RESULT
