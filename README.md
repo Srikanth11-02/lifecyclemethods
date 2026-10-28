@@ -27,11 +27,11 @@ Step 7: Save and run the application.
 
 ## PROGRAM:
 
-/*
+
 Program to print the text “Hello World”.
 Developed by: Srikanth K
 Registeration Number : 212225240153
-*/
+
 ## MainActivity.java
 ```
 package com.example.lifecyclemethods;
